@@ -1,3 +1,6 @@
+//beginner level
+
+
 const evenOrOdd = (number) => number % 2 === 0 ? console.log("even") : console.log("odd")
 evenOrOdd(5)
 
@@ -9,7 +12,18 @@ function sumOfDigits(nums) {
     return def
 }
 
-
-
-
 console.log(sumOfDigits([1, 2, 3, 4, 5, 6, 7, -10, -14]))
+
+//reverse string
+
+const reveresString = (string) => {
+    let stReversed = ''
+    for (let i = (string.length - 1); i > 0; i-- ){
+        stReversed += string[i] 
+    }
+    return stReversed
+}
+
+console.log(reveresString('hello world'))
+
+
