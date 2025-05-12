@@ -28,7 +28,7 @@ const reveresString = (string) => {
 console.log(reveresString('hello world'))
 
 
-const reverseInAnotherWay = (string)=>{
+const reverseInAnotherWay = (string) => {
     return string.split("").reverse().join("")
 }
 
@@ -44,25 +44,46 @@ console.log(lettersCounter("hello world"))
 
 //5 biggerNumberInAnArray
 
- const biggerNumber=(arr)=>{
-     let max = arr[0]
-     for(let i = 1; i < arr.length; i++){
-         arr[i] > max? max = arr[i] : max
-     }
-     return max
- }
+const biggerNumber = (arr) => {
+    let max = arr[0]
+    for (let i = 1; i < arr.length; i++) {
+        arr[i] > max ? max = arr[i] : max
+    }
+    return max
+}
 
 
-console.log(biggerNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11]))
+console.log(biggerNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
 
-//avg of array
+//6 avg of array
 
-const avg = (arr)=>{
+const avg = (arr) => {
     let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-         sum+=arr[i]
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
     }
     return sum / arr.length
 }
 
-console.log(avg([1,2,3,4,5]))
+console.log(avg([1, 2, 3, 4, 5]))
+
+//7 factorial with for loop
+
+const fact = (n) => {
+    let avg = 1;
+    for (let i = n; i > 1; i--) {
+        avg *= i
+    }
+    console.log(avg)
+}
+
+fact(5)
+
+//fact with recusrion
+
+const recursion = (n)=>{
+    if(n === 0 || n === 1) return 1;
+    return n * recursion(n - 1)
+}
+
+console.log(recursion(5))
