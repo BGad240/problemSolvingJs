@@ -81,9 +81,18 @@ fact(5)
 
 //fact with recusrion
 
-const recursion = (n)=>{
-    if(n === 0 || n === 1) return 1;
+const recursion = (n) => {
+    if (n === 0 || n === 1) return 1;
     return n * recursion(n - 1)
 }
 
 console.log(recursion(5))
+
+
+//8 Anagram
+
+const isAnagram = (str, str1) => {
+    return str.split("").sort().join() === str1.split("").sort().join() ? true : false
+}
+
+console.log(isAnagram('ollehh', 'hello'))
