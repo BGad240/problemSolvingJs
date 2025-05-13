@@ -96,3 +96,24 @@ const isAnagram = (str, str1) => {
 }
 
 console.log(isAnagram('ollehh', 'hello'))
+
+
+//9 flatten
+
+// let arr = [1,2,3,[4,5]]
+
+const flatten = (arr) => {
+    let demoArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            for (let j = 0; j < arr[i].length; j++) {
+                demoArr.push(arr[i][j]);
+            }
+        } else {
+            demoArr.push(arr[i]);
+        }
+    }
+    return demoArr;
+}
+
+console.log(flatten([1,2,3,[4,5]]))
