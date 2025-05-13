@@ -116,4 +116,23 @@ const flatten = (arr) => {
     return demoArr;
 }
 
-console.log(flatten([1,2,3,[4,5]]))
+console.log(flatten([1, 2, 3, [4, 5]]))
+
+
+
+
+
+//9 fizzBuzz
+
+
+function fizzBuzz(n) {
+    for (let i = 1; i <= n; i++) {
+        const fizz = (i % 3 === 0 && i % 5 === 0) ? "FizzBuzz" :
+            (i % 3 === 0 && i % 5 !== 0) ? "Fizz" :
+                (i % 3 !== 0 && i % 5 === 0) ? "Buzz" : i;
+        console.log(fizz);
+    }
+}
+
+
+fizzBuzz(10)
