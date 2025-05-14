@@ -192,3 +192,14 @@ function createAnagram(s, t) {
 
     return operations;
    }
+
+
+
+//12-BanjoPlay
+
+function areYouPlayingBanjo(name) {
+    let regex = /^[Rr]/
+    let truthyRes = regex.test(name)
+    truthyRes ? (name += " plays banjo") : (name += " does not play banjo")
+    return name;
+  }
