@@ -161,3 +161,34 @@ function tiyFizzBuzz(sentence) {
 
 
 console.log(tiyFizzBuzz("helloThere"))
+
+
+
+//11 create anagram
+
+
+function createAnagram(s, t) {
+
+    const countS = {};
+    const countT = {};
+    const len = s.length;
+
+
+    for (let i = 0; i < len; i++) {
+        const charS = s[i];
+        const charT = t[i];
+        countS[charS] = (countS[charS] || 0) + 1;
+        countT[charT] = (countT[charT] || 0) + 1;
+    }
+
+    let operations = 0;
+
+
+    for (const char in countS) {
+        if (countS[char] > (countT[char] || 0)) {
+            operations += countS[char] - (countT[char] || 0);
+        }
+    }
+
+    return operations;
+   }
