@@ -133,6 +133,31 @@ function fizzBuzz(n) {
         console.log(fizz);
     }
 }
-
+//this is fizzBuzz 
 
 fizzBuzz(10)
+
+
+//10 stringy fizzBuzz
+
+function tiyFizzBuzz(sentence) {
+    let regexCons = /[BCDFGHJKLMNPQRSTVWXYZ]/
+    let regexVowel = /[AEIOU]/
+    let smallRegexVowel = /[aeiou]/
+    let newString = ""
+    sentence.split("").map(str => {
+        if (regexVowel.test(str)) {
+            newString += "Iron Yard"
+        } else if (smallRegexVowel.test(str)) {
+            newString += "Yard"
+        } else if (regexCons.test(str)) {
+            newString += "Iron"
+        } else {
+            newString += str
+        }
+    })
+    return newString
+}
+
+
+console.log(tiyFizzBuzz("helloThere"))
