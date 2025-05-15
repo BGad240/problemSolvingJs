@@ -220,5 +220,28 @@ function firstNonRepeatingChar(str) {
 }
 
 console.log(firstNonRepeatingChar("aabbcde")); 
+
+
+
+//14-Group Anagram
+
+function groupAnagrams(words) {
+    let map = {};
+
+    for (let word of words) {
+        let sorted = word.split('').sort().join('');
+        if (!map[sorted]) {
+            map[sorted] = [];
+        }
+        map[sorted].push(word);
+    }
+
+    return Object.values(map);
+}
+
+
+console.log(groupAnagrams(["bat", "tab", "tap", "pat", "cat"]));
+
+
   
 
