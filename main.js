@@ -203,3 +203,22 @@ function areYouPlayingBanjo(name) {
     truthyRes ? (name += " plays banjo") : (name += " does not play banjo")
     return name;
   }
+
+
+
+
+//13-Find the First Non-Repeating Character
+
+
+function firstNonRepeatingChar(str) {
+    for (let char of str) {
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            return char;
+        }
+    }
+    return null;
+}
+
+console.log(firstNonRepeatingChar("aabbcde")); 
+  
+
