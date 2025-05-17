@@ -245,3 +245,31 @@ console.log(groupAnagrams(["bat", "tab", "tap", "pat", "cat"]));
 
   
 
+//15 longest unique string
+
+function longestUniqueSubstring(str) {
+    let set = new Set();
+    let start = 0;
+    let maxLen = 0;
+    let longestSub = "";
+
+    for (let end = 0; end < str.length; end++) {
+        while (set.has(str[end])) {
+            set.delete(str[start]);
+            start++;
+        }
+        set.add(str[end]);
+
+        if (end - start + 1 > maxLen) {
+            maxLen = end - start + 1;
+            longestSub = str.slice(start, end + 1);
+        }
+    }
+
+    return longestSub;
+}
+
+console.log(longestUniqueSubstring("abcabcbb")); 
+console.log(longestUniqueSubstring("bbbbb"));    
+console.log(longestUniqueSubstring("pwwkew"));   
+  
